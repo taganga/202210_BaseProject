@@ -1,3 +1,39 @@
-<p>
-  cafe-list works!
-</p>
+
+<div class="container border border-secondary  bg-light">
+  <div class="form-group row">
+<h5>El Aroma Magico</h5>
+    <img [src]="logoCafe">
+  </div>
+
+
+  <div class="form-group row">
+
+
+    <table >
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Tipo</th>
+      <th scope="col">region</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr mdbTableCol *ngFor="let cafe of cafes">
+      <th scope="row">{{ cafe.id }}</th>
+      <td>{{ cafe.nombre }}</td>
+      <td>{{ cafe.tipo }}</td>
+      <td>{{ cafe.region}}</td>
+    </tr>
+  </tbody>
+</table>
+
+  <div>
+     <p>total cafe de origen:{{totalTipoCafeArabico}} </p>
+     <p>total cafe blend:{{totalTipoCafeBlend}} </p>
+  </div>
+</div>
+</div>
+
+
